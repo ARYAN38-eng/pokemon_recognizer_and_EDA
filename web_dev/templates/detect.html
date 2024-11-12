@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detect Pokémon</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename="style1.css")}}">
+</head>
+<body>
+    <h1>Pokémon Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <input type="submit" value="Detect">
+    </form>
+
+    {% if detected_pokemon %}
+        <h2>Detected Pokémon: {{ detected_pokemon }}</h2>
+    {% endif %}
+</body>
+</html>
+
