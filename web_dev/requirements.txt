@@ -3,6 +3,6 @@ Flask-SQLAlchemy
 Flask-Login
 Flask-Bcrypt
 tensorflow
-opencv-python
+opencv-python-headless
 numpy
 pymysql
