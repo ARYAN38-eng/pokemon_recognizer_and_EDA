@@ -9,8 +9,8 @@ from flask_bcrypt import Bcrypt
 from config import SQLALCHEMY_DATABASE_URI, SECRET_KEY
 from database import db
 from database.models import User
-sys.path.append(os.path.abspath(".."))
-from model_interface import predict_image
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from ..model_interface import predict_image
 import pymysql
 
 app=Flask(__name__)
@@ -45,7 +45,6 @@ def register():
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
-        
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
         new_user = User(username=username, email=email, password=hashed_password)
         db.session.add(new_user)
