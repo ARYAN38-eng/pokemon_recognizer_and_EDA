@@ -10,7 +10,7 @@ from config import SQLALCHEMY_DATABASE_URI, SECRET_KEY
 from database import db
 from database.models import User
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from ..model_interface import predict_image
+from model_interface import predict_image
 import pymysql
 
 app=Flask(__name__)
