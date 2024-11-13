@@ -18,7 +18,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 app.config['SECRET_KEY'] = SECRET_KEY
 db.init_app(app)
 bcrypt = Bcrypt(app)
-model=tf.keras.models.load_model("../model/pokemon_recognizer_model.h5")
+model=tf.keras.models.load_model("../model/pokemon_recognizer_model.keras")
 
 # Flask-Login setup
 login_manager = LoginManager()
