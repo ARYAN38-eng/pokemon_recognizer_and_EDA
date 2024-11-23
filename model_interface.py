@@ -4,7 +4,7 @@ import numpy as np
 import tensorflow as tf 
 
 # Load the model
-model_path = os.path.join(os.path.dirname(__file__), 'model', 'pokemon_recognizer_model.keras')
+model_path = os.path.join(os.path.dirname(__file__), 'model', 'best_model.keras')
 model = tf.keras.models.load_model(model_path)
 
 def predict_image(file):
